@@ -1,6 +1,6 @@
 const app = {
 	config: {
-		container: document.querySelector(`.targetClassOrId`), // "targetClassOrId" is the class (or id) of the "app" we are working on
+		keyDivs: [...document.querySelectorAll(`main.div`)],
 		subContainer: document.querySelector(`.targetClassOrId`), // a child of "container"
 		secretCode: [`ArrowUp`, `ArrowUp`, `ArrowDown`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `ArrowLeft`, `ArrowRight`, `b`, `a`, `Enter`],
 		pressed: [],
@@ -27,6 +27,14 @@ const app = {
 		[...pressed].join(` `) === [...code].join(` `)
 			&& console.log(`you did it!`);
 	},
+
+	revealCode(pressed, code) {
+		const keys = app.config.keyDivs;
+
+		keys.forEadh((key, index)=> {
+			// hide divs until the correct key(sequence) is pressed
+		});
+	}
 
 };
 
